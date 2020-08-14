@@ -19,7 +19,7 @@ First, compile the `.cpp` file to generate a `.exe` file:
 Now, run the generated `.exe` file.   
 In our case this will be `helloApp.exe` since we used `helloApp` as the name of our output file in the command above.  
 ```
-> helloApp
+> helloApp.exe
 ```
 
 ## Introduction
@@ -55,3 +55,15 @@ __Bi-Endian and Little-Endian System__
 When you process binary data that comes from another machine, you need to know the endianness of that machine. Binary data is written to a file or transmitted over a network as sequence of bytes.  It's up to you how to interpret it. If the source of the data is a machine with a different endianness from the machine on which your code is running, you must reverse the order of the bytes in each binary value. If you don't you have garbage.  
 
 ## Chapter 2:  Introducing Fundamental Types of Data
+__Variables, Data and Data Types__  
+A variable is a name piece of memory that you define.  
+
+__Integer Literal__  
+You can use the single quote character as a separator for any integer literal. For exmample:  
+```
+long long distance {15'000'000};
+unsigned long number1 {0xFF00'00FF'0001UL};
+int number2 {0b1100'1010'1101};
+```  
+
+## Chapter 3: Working with Fundamental Data Types  
