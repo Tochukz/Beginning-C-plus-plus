@@ -67,3 +67,6 @@ int number2 {0b1100'1010'1101};
 ```  
 
 ## Chapter 3: Working with Fundamental Data Types  
+Review:
+* Bitwise Operator
+* Logical Operations on Bit patterns 
