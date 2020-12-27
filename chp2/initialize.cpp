@@ -2,7 +2,7 @@
 
 int main()
 {
-    int i; // ddefaults to 4200907
+    int i; // defaults to 4200907
     int j {}; // defaults to 0.  This is true for all numeric types
 
     /* Using the braced initializer*/
@@ -27,7 +27,7 @@ int main()
     int totalZ = z + 3.142;
 
     /* Definining constants */
-    const unsigned months {12}; // the unsigned modifier is shorthand for unsigned int 
+    const unsigned months {12}; // the unsigned modifier is shorthand for unsigned int
     const double avogrado {6.02E23};
 
 
@@ -37,8 +37,8 @@ int main()
     std::cout << "Avogrado number = " << avogrado << std::endl;
 }
 
-/* 
-* The braced initializer is the recommended syntax. 
-* It is commomly refered to as uniform initialization because it enables you to initialize ust about anything. 
+/*
+* The braced initializer is the recommended syntax.
+* It is commomly refered to as uniform initialization because it enables you to initialize ust about anything.
 * It is also safer when it comes to narrowing conversions bacause brace initializer syntax with  at least throw an error for a narrrowing conversion.
 */
