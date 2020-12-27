@@ -7,9 +7,9 @@ int main()
 }
 
 /**
- * T compile  
+ * To compile
  * > c++ -o helloApp helloworld.cpp
- * 
- * To run 
+ *
+ * To run
  * > helloApp.exe
- * /
+ */
