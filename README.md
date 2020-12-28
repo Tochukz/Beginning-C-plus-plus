@@ -76,10 +76,17 @@ While _char_ can store a single character and occupies one byte, _signed char_ a
 _`wchar_t`_ stores a wide character and occupies either two or four bytes depending on your compiler. Types _`char16_t`_ and _`char32_t`_ may be better for handling Unicode character in a cross-platform manner.
 
 __The auto keyword__   
-If your compiler properly supports C__17, you can use braced initialization to initialize any variable with a single value, provided you do not combine it with an assignment. If your compiler is not fully up-to-date yet, however, you should simply never use braced initializer with _auto_. Instead, either explicitly state the type or use assignment of functional notation.
+If your compiler properly supports C++17, you can use braced initialization to initialize any variable with a single value, provided you do not combine it with an assignment. If your compiler is not fully up-to-date yet, however, you should simply never use braced initializer with _auto_. Instead, either explicitly state the type or use assignment of functional notation.
 
 
 ## Chapter 3: Working with Fundamental Data Types  
-Review:
-* Bitwise Operator
-* Logical Operations on Bit patterns
+__The Lifetime of a Variable__  
+
+| Variable | Duration                   | Lifetime                                    |
+|----------|----------------------------|---------------------------------------------|
+| local    | automatic storage duration | They are destroyed at the end of the block  |
+| static   | static storage duration    | Are destroyed when the program ends         |
+| dynamic  | dynamic storage duration   | Are destroyed when you release their memory |
+| thread   | thread storage duration    | Learn more later (Advanced topic)           |  
+
+Local variables are also called automatic variables.  
