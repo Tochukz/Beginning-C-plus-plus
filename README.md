@@ -1,4 +1,4 @@
-# Beginning C++17  (2018)
+# Beginning C++17, 5th Edition (2018)
 __By Ivor Horto and Peter Van Weert__  
 [Example Code](https://github.com/apress/beg-cplusplus17)
 
@@ -90,3 +90,9 @@ __The Lifetime of a Variable__
 | thread   | thread storage duration    | Learn more later (Advanced topic)           |  
 
 Local variables are also called automatic variables.  
+
+## Chapter 4: Making Decisions  
+Superfluous semicolons, and therefore empty statements, are allowed to appear pretty much anywhere within a series of statements.  
+```
+int i = 0;; i += 5;; ; std::cout << i << std::endl ;;
+```

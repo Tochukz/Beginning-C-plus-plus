@@ -23,7 +23,7 @@ int main() {
     unsigned int bit1mask { 0x1 };
     unsigned int bit6mask { 0b100000 };
     unsigned int bit20mask { 1u << 19}; 
-    std::cout << "\nSelect bit 1 from flags: " <<std::setw(8) << (flags & bit1mask); // Select bit 1 from flags: 00000001
+    std::cout << "\nSelect bit 1 from flags: " << std::setw(8) << (flags & bit1mask); // Select bit 1 from flags: 00000001
     std::cout << "\nSelect bit 6 from flags: " << std::setw(8) << (flags & bit6mask); // Select bit 6 from flags: 00000020
     std::cout << "\nSwitch off bit 6 from flags: " << std::setw(8) << (flags &= ~bit6mask); // Switch off bit 6 from flags: 000000df
     std::cout << "\nSwitch on bit 20 in flag: " << std::setw(8) << (flags |= bit20mask) // Switch on bit 20 in flag: 000800df
@@ -35,5 +35,7 @@ int main() {
  The std::hex manipulator makes all subsequent integer output to be in hexadecimal format.
  The std::setfill('0') manipulator makes fill the ouput with 0s up to the set width set by std::setw('n') 
  The std::hex and std::setfill manipulators are modals so they remain in effect until they are reset.
- The std::setw is not model, so you have to insert it into the stream before each output value
+ The std::setw is not model, so you have to insert it into the stream before each output value.
+
+ The mask to select a particular bit must have that bit as 1 and all others as zero
 **/
