@@ -96,3 +96,11 @@ Superfluous semicolons, and therefore empty statements, are allowed to appear pr
 ```
 int i = 0;; i += 5;; ; std::cout << i << std::endl ;;
 ```
+
+__Character Classification and Conversion__  
+A _locale_ is a set of parameters that defines the user's language and regional preferences, including the national or cultural character set and the formatting rules for currency dates. The _cctype_ header provides character classification functions.
+
+__Statement Blocks and Variable Scope__  
+For a variable defined in a switch statement to be legal, it must be reachable and it must not be possible during execution to enter the scope of the variable while bypassing its definition.
+
+## Chapter 5: Arrays and Loops  
