@@ -9,7 +9,9 @@ See Youtube [video](https://www.youtube.com/watch?v=sXW2VLrQ3Bs) on how to insta
 After installation and adding the compiler binary to your path you can verify the installation from your terminal.  
 ```
 > g++ --version
-```
+```  
+Alternatively, if you already have the Visual C++ workload of visual studio installed you can add the `cl.exe` executable to your path. Something like `C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.27.29110\bin\Hostx86\x64`.  
+After that you should have the `cl` command available on your command prompt.
 
 __To run a  C++ Helloworld Application__  
 First, compile the `.cpp` file to generate a `.exe` file:   
@@ -104,3 +106,9 @@ __Statement Blocks and Variable Scope__
 For a variable defined in a switch statement to be legal, it must be reachable and it must not be possible during execution to enter the scope of the variable while bypassing its definition.
 
 ## Chapter 5: Arrays and Loops  
+__Caution__ Array index values are not checked to verify that they are valid. It’s up to you to make sure that
+you don’t reference elements outside the bounds of the array. If you store data using an index value that’s
+outside the valid range for an array, you’ll either inadvertently overwrite something in memory or cause a socalled
+segmentation fault or access violation (both terms are synonymous and denote an error that is raised by
+the operating system if and when it detects unauthorized memory access). Either way, your program will almost
+certainly come to a sticky end.
