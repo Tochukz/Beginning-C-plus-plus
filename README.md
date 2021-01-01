@@ -10,6 +10,8 @@ After installation and adding the compiler binary to your path you can verify th
 ```
 > g++ --version
 ```  
+Another option is to go to [geeksforgeeks.org](https://www.geeksforgeeks.org/complete-guide-to-install-c17-in-windows/) and use the guide to install a distro curated by the third party. This will give you the latest version. The compiler from the source used a different command compared to the one from [mingw.org](mingw.org).
+
 Alternatively, if you already have the Visual C++ workload of visual studio installed you can add the `cl.exe` executable to your path. Something like `C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.27.29110\bin\Hostx86\x64`.  
 After that you should have the `cl` command available on your command prompt.
 
@@ -106,9 +108,19 @@ __Statement Blocks and Variable Scope__
 For a variable defined in a switch statement to be legal, it must be reachable and it must not be possible during execution to enter the scope of the variable while bypassing its definition.
 
 ## Chapter 5: Arrays and Loops  
-__Caution__ Array index values are not checked to verify that they are valid. It’s up to you to make sure that
+__Caution__: Array index values are not checked to verify that they are valid. It’s up to you to make sure that
 you don’t reference elements outside the bounds of the array. If you store data using an index value that’s
 outside the valid range for an array, you’ll either inadvertently overwrite something in memory or cause a socalled
 segmentation fault or access violation (both terms are synonymous and denote an error that is raised by
-the operating system if and when it detects unauthorized memory access). Either way, your program will almost
-certainly come to a sticky end.
+the operating system if and when it detects unauthorized memory access). Either way, your program will almost certainly come to a sticky end.
+
+__Controlling a for Loop with Floating-Point Values__   
+You need to be careful when using a floating-point variable to control a for loop. Fractional values may
+not be representable exactly as a binary floating-point number. This can lead to some unwanted side effects.
+
+__Note__: Any number that is a fraction with an odd denominator cannot be represented exactly as a binary
+floating-point value.
+
+__Caution__: Comparing floating-point numbers can be tricky. You should always be cautious when comparing
+the result of floating-point computations directly using operators such as `==`, `<=`, or `>=`. Rounding errors almost
+always prevent the floating-point value from ever becoming exactly equal to the mathematical precise value.
