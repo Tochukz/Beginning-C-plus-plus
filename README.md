@@ -110,9 +110,7 @@ For a variable defined in a switch statement to be legal, it must be reachable a
 ## Chapter 5: Arrays and Loops  
 __Caution__: Array index values are not checked to verify that they are valid. It’s up to you to make sure that
 you don’t reference elements outside the bounds of the array. If you store data using an index value that’s
-outside the valid range for an array, you’ll either inadvertently overwrite something in memory or cause a socalled
-segmentation fault or access violation (both terms are synonymous and denote an error that is raised by
-the operating system if and when it detects unauthorized memory access). Either way, your program will almost certainly come to a sticky end.
+outside the valid range for an array, you’ll either inadvertently overwrite something in memory or cause a socalled segmentation fault or access violation (both terms are synonymous and denote an error that is raised by the operating system if and when it detects unauthorized memory access). Either way, your program will almost certainly come to a sticky end.
 
 __Controlling a for Loop with Floating-Point Values__   
 You need to be careful when using a floating-point variable to control a for loop. Fractional values may
@@ -124,3 +122,6 @@ floating-point value.
 __Caution__: Comparing floating-point numbers can be tricky. You should always be cautious when comparing
 the result of floating-point computations directly using operators such as `==`, `<=`, or `>=`. Rounding errors almost
 always prevent the floating-point value from ever becoming exactly equal to the mathematical precise value.
+
+__Note__: There will be no warning if a number value cannot be accommodated in the memory allocated; the
+result will just be incorrect.
