@@ -4,7 +4,7 @@
 
 int main() {
     double scores[7] { 78.5, 60.6, 78.5, 63.9, 59.3, 63.2, 47.4};
-    double scoresPlus5[7] = {};
+    double scoresPlus5[7] {};
 
     double totalScore {};   
     for (size_t i {}; i < std::size(scores); i++) {

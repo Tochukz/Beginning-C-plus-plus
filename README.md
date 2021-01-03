@@ -10,7 +10,7 @@ After installation and adding the compiler binary to your path you can verify th
 ```
 > g++ --version
 ```  
-Another option is to go to [geeksforgeeks.org](https://www.geeksforgeeks.org/complete-guide-to-install-c17-in-windows/) and use the guide to install a distro curated by the third party. This will give you the latest version. The compiler from the source used a different command compared to the one from [mingw.org](mingw.org).
+Another option is to go to [geeksforgeeks.org](https://www.geeksforgeeks.org/complete-guide-to-install-c17-in-windows/) and use the guide to install a distro curated by a third party. This will give you the latest version. The compiler from the source uses a different command compared to the one from [mingw.org](mingw.org).
 
 Alternatively, if you already have the Visual C++ workload of visual studio installed you can add the `cl.exe` executable to your path. Something like `C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.27.29110\bin\Hostx86\x64`.  
 After that you should have the `cl` command available on your command prompt.
@@ -124,4 +124,10 @@ the result of floating-point computations directly using operators such as `==`,
 always prevent the floating-point value from ever becoming exactly equal to the mathematical precise value.
 
 __Note__: There will be no warning if a number value cannot be accommodated in the memory allocated; the
-result will just be incorrect.
+result will just be incorrect.  
+
+__Controlling a for Loop with Unsigned Integers__   
+__Caution__: Take care when subtracting from unsigned integers. Any value that mathematically speaking should be negative then wraps around to become a huge positive number. These types of errors can have a catastrophic results in loop control expressions.  
+
+__Array of Characters__  
+Ac character array that is terminated by `'\0'` is referred to as a _C-style string_
