@@ -130,4 +130,11 @@ __Controlling a for Loop with Unsigned Integers__
 __Caution__: Take care when subtracting from unsigned integers. Any value that mathematically speaking should be negative then wraps around to become a huge positive number. These types of errors can have a catastrophic results in loop control expressions.  
 
 __Array of Characters__  
-Ac character array that is terminated by `'\0'` is referred to as a _C-style string_
+A character array that is terminated by `'\0'` is referred to as a _C-style string_.  
+
+__Allocating an Array at Runtime__   
+The _C++17_ standard does not permit an array dimension to be specified at runtime. That s, the array dimension must be a constant expression that can be evaluated by the compiler.   
+However, some current _C++ compilers_ do allow setting variable array dimensions at runtime because the current _C standard_, _C11_, permits this, and a _C++ compiler_ will typically compile C code too.   
+__Note__: If your compiler does not allow variable-length arrays, you can achieve the same result - and much more using a _vector_.   
+
+## Chapter 6: Pointer and References  
