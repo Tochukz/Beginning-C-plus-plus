@@ -96,5 +96,5 @@ Applying comparison operators to plain arrays is not all that useful because it 
 not result in thrie elements being compared.
 
 If you call a legancy function that expects plain arrays as input, you can always access the
-build-in array that is encapsulated within the array<> object using its data() memeber
+build-in array that is encapsulated within the array<> object using its data() member
 **/
