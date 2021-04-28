@@ -1,6 +1,6 @@
 # Beginning C++17, 5th Edition (2018)
 __By Ivor Horto and Peter Van Weert__  
-[Example Code](https://github.com/apress/beg-cplusplus17)
+[Github Example Code](https://github.com/apress/beg-cplusplus17)
 
 ## Getting Started
 First you need to install the MinGW GCC/G++ compiler which is used to compile C and C++ programs.  
@@ -138,3 +138,10 @@ However, some current _C++ compilers_ do allow setting variable array dimensions
 __Note__: If your compiler does not allow variable-length arrays, you can achieve the same result - and much more using a _vector_.   
 
 ## Chapter 6: Pointer and References  
+__What is a Pointer__  
+A _pointer_ is a variable that can store an address of another variable, of some piece of data elsewhere in memory.  
+
+__Tip__: As a rule, you should always initialize a pointer when you define it because it reckless not to. Uninitialized pointers are more dangerous than ordinary variables that aren’t initialized. Therefore, if you cannot give it an intended value yet, initialize the pointer to _nullptr_.   
+
+All pointer variable _for a given platform_ will have the same size. The size of pointer variables depends only on the amount of addressable memory of your target platform.   
+Fr nearly all platforms today, the size of pointer variable will be either 4 or 8 bytes (for 32- and 64-bit computer architectures, respectively). In principle, you may encounter other values as well, such as if you target more specialized embedded systems.  
