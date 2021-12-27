@@ -10,7 +10,7 @@ After installation and adding the compiler binary to your path you can verify th
 ```
 > g++ --version
 ```  
-Another option is to go to [geeksforgeeks.org](https://www.geeksforgeeks.org/complete-guide-to-install-c17-in-windows/) and use the guide to install a distro curated by a third party. This will give you the latest version. The compiler from the source uses a different command compared to the one from [mingw.org](mingw.org).
+Another option is to go to [geeksforgeeks.org](https://www.geeksforgeeks.org/complete-guide-to-install-c17-in-windows/) and use the guide to install a distro curated by a third party. This will give you the latest version. The compiler from this source uses a different command compared to the one from [mingw.org](mingw.org).
 
 Alternatively, if you already have the Visual C++ workload of visual studio installed you can add the `cl.exe` executable to your path. Something like `C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.27.29110\bin\Hostx86\x64`.  
 After that you should have the `cl` command available on your command prompt.
@@ -144,4 +144,4 @@ A _pointer_ is a variable that can store an address of another variable, of some
 __Tip__: As a rule, you should always initialize a pointer when you define it because it reckless not to. Uninitialized pointers are more dangerous than ordinary variables that aren’t initialized. Therefore, if you cannot give it an intended value yet, initialize the pointer to _nullptr_.   
 
 All pointer variable _for a given platform_ will have the same size. The size of pointer variables depends only on the amount of addressable memory of your target platform.   
-Fr nearly all platforms today, the size of pointer variable will be either 4 or 8 bytes (for 32- and 64-bit computer architectures, respectively). In principle, you may encounter other values as well, such as if you target more specialized embedded systems.  
+For nearly all platforms today, the size of pointer variable will be either 4 or 8 bytes (for 32- and 64-bit computer architectures, respectively). In principle, you may encounter other values as well, such as if you target more specialized embedded systems.  

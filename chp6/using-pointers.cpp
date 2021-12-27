@@ -19,7 +19,7 @@ int main() {
 
 	// Calculate net price in US$
 	double net_price {};
-	double* pnet_price {nullptr}; // expliciting initializing a pointer with nullptr i.e the zero equivalent for pointers
+	double* pnet_price {nullptr}; // explicitly initializing a pointer with nullptr i.e the zero equivalent for pointers
 	pnet_price = &net_price;
 
 	if (*pcount > discount_threshold)  { // By dereferencing pcount (i.e *pcount) we use the value in the address of pcount directly
@@ -29,7 +29,6 @@ int main() {
 		net_price = *pprice / 100.0;
 	}
 	std::cout << "The net price for " << *pcount << " items is $" << net_price << std::endl;
-
 }
 
 /**
